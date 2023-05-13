@@ -1,4 +1,280 @@
 {
-    "git.enableSmartCommit": true
     // @modified - esto permite ver unicamente cuales settings han sido modificados
+    //
+    // ## 001 ## Experimentales ################################################
+    // ## 002 ## Relacionados con git ##########################################
+    "git.enableSmartCommit": true, // stage los archivos modificados si solo se pone el mensaje del commit
+    "git.autofetch": "all", // mantiene automaticamente la rama local actualizada con lo q esta en el remoto
+    "git.confirmSync": false,
+    "git.allowForcePush": true,
+    "githubPullRequests.pushBranch": "always",
+    
+    "git.branchPrefix": "dev/FQ211776/",
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+    "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}${sanitizedIssueTitle}",
+    "githubPullRequests.pullBranch": "always",
+    "gitHistory.includeRemoteBranches": true,
+    "git.pullBeforeCheckout": true,
+    "git.fetchOnPull": true,
+    "git.openRepositoryInParentFolders": "always",
+    "git.mergeEditor": true,
+    "gitlens.currentLine.enabled": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.rebaseEditor.ordering": "asc",
+    "gitlens.graph.experimental.minimap.enabled": true,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.graph.layout": "panel",
+    "gitlens.statusBar.alignment": "left",
+    "gitlens.statusBar.enabled": true,
+    "gitTreeCompare.diffMode": "full",
+    "gitdoc.enabled": false,  // Extension GitDoc para hacer auto commits al salvar
+    "magit.display-buffer-function": "other-column",
+    "magit.forge-enabled": true,
+     // ## 003 ## github copilot #########################s######################
+   // code --install-extension GitHub.copilot
+   "github.copilot.enable": {
+     "*": true,
+     "yaml": false,
+     "plaintext": true,
+     "markdown": false
+   },
+
+
+         // ## 020 ## whichkey extension ##########################################
+  "whichkey.sortOrder": "typeThenCustom",
+  "whichkey.bindings": [
+    {
+        "key": "g",
+        "name": "+Git",
+        "type": "bindings",
+        "bindings": [
+            {
+              "key": "0",
+              "name": "Magit Status",
+              "icon": "preview",
+              "type": "command",
+              "command": "magit.status"
+            },
+            {
+                "key": "1",
+                "name": "Git Status",
+                "type": "command",
+                "command": "workbench.view.scm"
+              },
+            {
+                "key": "2",
+                "name": "Magit File Popup",
+                "icon": "preview",
+                "type": "command",
+                "command": "magit.file-popup"
+              },
+              {
+                "key": "3",
+                "name": "Magit Dispatch",
+                "icon": "preview",
+                "type": "command",
+                "command": "Magit Dispatch"
+              },
+              {
+                "key": "4",
+                "name": "Magit Stage file",
+                "icon": "file-add",
+                "type": "command",
+                "command": "magit.stage-file"
+              },
+              {
+                "key": "5",
+                "name": "Magit Unstage file",
+                "icon": "file",
+                "type": "command",
+                "command": "magit.unstage-file"
+              },
+              {
+                "key": "6",
+                "name": "Diff todo con meld",
+                "icon": "preview",
+                "type": "command",
+                "command": "gitlens.externalDiffAll"
+              },
+              {
+                "key": "7",
+                "name": "Create Github repo and clone it",
+                "icon": "repo-create",
+                "type": "command",
+                "command": "githubRepoMgr.commands.repos.createRepo"
+              },
+              {
+                "key": "8",
+                "name": "Clone",
+                "icon": "repo-clone",
+                "type": "command",
+                "command": "git.clone"
+              },
+              {
+            "key": "9",
+            "name": "Todo git",
+            "type": "command",
+            "command": "workbench.action.quickOpen",
+            "args": ">git"
+          },
+          {
+            //
+            "key": "a",
+            "name": "Blame file",
+            "icon": "file",
+            "type": "command",
+            // "command": "magit.blame-file",
+            "command": "gitlens.toggleFileBlame"
+          },
+          {
+            "key": "b",
+            "name": "Checkout",
+            "type": "command",
+            "command": "git.checkout"
+          },
+          {
+            "key": "c",
+            "name": "Commit",
+            "type": "command",
+            "command": "git.commit"
+          },
+          {
+            "key": "D",
+            "name": "+Diff/Compare",
+            "icon": "diff",
+            "type": "bindings",
+            "bindings": [
+              {
+                "key": "c",
+                "name": "Compare active file with clipboard",
+                "icon": "clippy",
+                "type": "command",
+                "command": "workbench.files.action.compareWithClipboard"
+              },
+              {
+                "key": "m",
+                "name": "Compare current merge conflict",
+                "icon": "git-merge",
+                "type": "command",
+                "command": "merge-conflict.compare"
+              },
+              {
+                "key": "s",
+                "name": "Compare active file with saved",
+                "icon": "save-as",
+                "type": "command",
+                "command": "workbench.files.action.compareWithSaved"
+              },
+              {
+                "key": "w",
+                "name": "Toggle ignore trim whitespace",
+                "icon": "whitespace",
+                "type": "command",
+                "command": "toggle.diff.ignoreTrimWhitespace"
+              },
+              {
+                "key": "D",
+                "name": "+Compare active file with",
+                "icon": "diff",
+                "type": "command",
+                "command": "workbench.files.action.compareFileWith"
+              }
+            ]
+          },
+          {
+            "key": "d",
+            "name": "Create, Delete, rename branch",
+            "type": "command",
+            "command": "git.branch"
+          },
+          {
+            "key": "f",
+            "name": "Fetch",
+            "type": "command",
+            "command": "git.fetch"
+          },
+          {
+            "key": "i",
+            "name": "Init",
+            "type": "command",
+            "command": "git.init"
+          },
+          {
+            "key": "m",
+            "name": "Merge",
+            "type": "command",
+            "command": "git.merge"
+          },
+          {
+            "key": "M",
+            "name": "Merge",
+            "type": "command",
+            "command": "gitMerger.mergeFrom"
+          },
+          {
+            "key": "p",
+            "name": "Publishing a Local Branch",
+            "type": "command",
+            "command": "githubRepoMgr.commands.repos.publish"
+            // "command": "git.publish"
+          },
+          
+          {
+            "key": "q",
+            "name": "Crear Pull Request",
+            "type": "command",
+            "command": "pr.create"
+          },
+  
+          {
+            "key": "s",
+            "name": "Stage",
+            "type": "command",
+            "command": "git.stage"
+          },
+          {
+            "key": "u",
+            "name": "Unstage",
+            "type": "command",
+            "command": "git.unstage"
+          },
+          {
+            "key": "z",
+            "name": "+File",
+            "icon": "file",
+            "type": "bindings",
+            "bindings": [
+              {
+                "key": "d",
+                "name": "Diff",
+                "icon": "diff",
+                "type": "command",
+                "command": "magit.diff-file"
+              },
+              {
+                "key": "l",
+                "name": "Show log/timeline",
+                "icon": "history",
+                "type": "command",
+                "command": "timeline.focus"
+              }
+            ]
+          },
+
+          
+
+
+
+
+
+
+
+                  
+        ]
+      },
+      
+],
+"editor.inlineSuggest.enabled": true,
+"notebook.diff.overviewRuler": true,
+"workbench.sideBar.location": "right"
 }

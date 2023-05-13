@@ -55,4 +55,5 @@
         "command": "-cursorWordEndRightSelect",
         "when": "textInputFocus && !accessibilityModeEnabled"
     },
+    
 ]
