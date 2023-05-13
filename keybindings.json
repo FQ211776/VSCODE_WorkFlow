@@ -1,31 +1,58 @@
 // Place your key bindings in this file to override the defaults
+//
+// shift+space............Menu personalizado
+// CTRL+SHIFT+RIGHT.......Copia todo lo que esta entre doble comillas
+// CTRL+F1................Selecciona todo dentro del caret
+// SHIFT+ALT+RIGHT/LEFT...Smart Expand/Shrink
 [
     {
         "key": "shift+space",
         "command": "whichkey.show"
+    },
+    /// el nirvana
+    {
+        "key": "ctrl+shift+right",
+        "command": "extension.selectDoubleQuote",
+        // dbankier.vscode-quick-select
+        // 
+        // extension.selectSingleQuote
+        // extension.selectDoubleQuote
+        // extension.selectEitherQuote
+        // extension.switchQuotes
+        // extension.selectParenthesis
+        // extension.selectBackTick
+        // extension.selectSquareBrackets
+        // extension.selectCurlyBrackets
+        // extension.selectParenthesisOuter
+        // extension.selectSquareBracketsOuter
+        // extension.selectCurlyBracketsOuter
+        // extension.selectAngleBrackets
+        // extension.selectInTag
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+f1",
         "command": "editor.action.selectToBracket"
     },
     {
+        "key": "shift+alt+right",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+/",
+        "command": "hidecomments.toggle"
+        // eliostruyf.vscode-hide-comments
+    },
+    /// fin de el nirvana
+    {
         "key": "ctrl+shift+right",
         "command": "-cursorWordEndRightSelect",
         "when": "textInputFocus && !accessibilityModeEnabled"
     },
-    {
-        "key": "shift+alt+right",
-        "command": "-editor.action.smartSelect.expand",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "extension.selectDoubleQuote",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+k shift+'",
-        "command": "-extension.selectDoubleQuote",
-        "when": "editorFocus"
-    }
 ]

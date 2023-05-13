@@ -2,3 +2,6 @@ History/
 globalStorage/
 sync/
 workspaceStorage/
+profiles/
+snippets/
+.vscode/
