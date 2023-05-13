@@ -100,7 +100,7 @@
   },
   //
   //
-  // ## 001 ## Fuentes #########################################################
+  // ## 004 ## Fuentes #########################################################
   //
   // #### de la terminal
   "terminal.integrated.fontFamily": "BitstreamVeraSansMono Nerd Font",
@@ -121,7 +121,100 @@
   "terminal.integrated.fontSize": 16,
   //
   //
+  //
+  // ## 005 ## Personalizar Apariencia #######################################
+  //
+  "editor.bracketPairColorization.enabled": true, 
+  // #### iconos
+  "workbench.iconTheme": "material-icon-theme",
+  //
+  // #### tema
+  "workbench.colorTheme": "One Dark Pro Flat",
+  //
+  "workbench.editor.wrapTabs": true,
+
+  // ### colores e iconos personalizados
+  "workbench.colorCustomizations":{
+    // Bracket pair colorizer
+    "editorBracketHighlight.foreground1": "#fafafa",
+    "editorBracketHighlight.foreground2": "#9F51B6",
+    "editorBracketHighlight.foreground3": "#F7C244",
+    "editorBracketHighlight.foreground4": "#F07850",
+    "editorBracketHighlight.foreground5": "#9CDD29",
+    "editorBracketHighlight.foreground6": "#0098FA",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000",
+    //
+    "tab.activeBorderTop": "#eaeff3", // Active Tab Top Highlighting
+    "tab.activeBorder": "#ff0000",
+    "tab.activeBackground": "#ffffff20",
+    "tab.unfocusedActiveBorder": "#000000",
+    "scrollbarSlider.background": "#ff0000",
+    "scrollbarSlider.hoverBackground": "#0088ff",
+    "editor.scrollbar.verticalScrollbarSize": 10,
+    "editor.scrollbar.horizontal": "visible",
+    "editor.scrollbar.horizontalScrollbarSize": 15,
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f",
+    // "[Material Theme Darker]": {
+    "material-icon-theme.folders.associations": {
+      "infrastructure": "Cluster",
+      "stripe": "Resource",
+      "global_state": "global",
+      "ui": "Cluster",
+      "bloc": "Resource"
+    },
+    "[One Dark Pro Flat]": {
+      "editor.background": "#282C34",
+      "titleBar.inactiveBackground": "#eaeff3",
+      "statusBar.debuggingBackground": "#212121",
+      "activityBarBadge.background": "#FFA000",
+      "activityBar.activeBorder": "#FFA000",
+      "list.activeSelectionForeground": "#FFA000",
+      "list.inactiveSelectionForeground": "#FFA000",
+      "list.highlightForeground": "#FFA000",
+      "scrollbarSlider.activeBackground": "#FFA00050",
+      "editorSuggestWidget.highlightForeground": "#FFA000",
+      "textLink.foreground": "#FFA000",
+      "progressBar.background": "#FFA000",
+      "pickerGroup.foreground": "#FFA000",
+      "tab.activeBorder": "#FFA000",
+      "notificationLink.foreground": "#FFA000",
+      "editorWidget.resizeBorder": "#FFA000",
+      "editorWidget.border": "#FFA000",
+      "settings.modifiedItemIndicator": "#FFA000",
+      "settings.headerForeground": "#FFA000",
+      "panelTitle.activeBorder": "#FFA000",
+      "breadcrumb.activeSelectionForeground": "#FFA000",
+      "menu.selectionForeground": "#FFA000",
+      "menubar.selectionForeground": "#FFA000",
+      "editor.findMatchBorder": "#FFA000",
+      "selection.background": "#FFA00040",
+      "statusBarItem.remoteBackground": "#FFA000",
+      "terminal.foreground": "#abb2bf",
+      "terminal.ansiBlack": "#1e2127",
+      "terminal.ansiBlue": "#61afef",
+      "terminal.ansiCyan": "#56b6c2",
+      "terminal.ansiGreen": "#98C379",
+      "terminal.ansiMagenta": "#c678dd",
+      "terminal.ansiRed": "#e06c75",
+      "terminal.ansiWhite": "#abb2bf",
+      "terminal.ansiYellow": "#d19a66",
+      "terminal.ansiBrightBlack": "#5c6370",
+      "terminal.ansiBrightBlue": "#61afef",
+      "terminal.ansiBrightCyan": "#56b6c2",
+      "terminal.ansiBrightGreen": "#98c379",
+      "terminal.ansiBrightMagenta": "#c678dd",
+      "terminal.ansiBrightRed": "#e06c75",
+      "terminal.ansiBrightWhite": "#ffffff",
+      "terminal.ansiBrightYellow": "#d19a66"
+    }
+  },
+  //
+  //
+  
+
   // ## 020 ## whichkey extension ##########################################
+
   "whichkey.sortOrder": "typeThenCustom",
   "whichkey.bindings": [
     {
