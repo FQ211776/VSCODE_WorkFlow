@@ -122,8 +122,31 @@
   //
   //
   //
+  
+  // ## 005 ## Personalizar El editor #######################################
+  
+  // --------------------------------Power Mode----------
+  // 
+  "powermode.combo.location": "off",
+    "powermode.enabled": true,      
+    "powermode.explosions.duration": 300,
+    "powermode.explosions.size": 7,
+    "powermode.shake.enabled": false,
+    "powermode.explosions.backgroundMode": "transparent",
+    "editor.guides.highlightActiveIndentation": "always",
+
   // ## 005 ## Personalizar Apariencia #######################################
   //
+  "window.newWindowDimensions": "fullscreen",
+  "window.restoreFullscreen": true,
+ // siempre comenzar una sesion en blanco
+ "window.restoreWindows": "none",
+  // El sticky scroll lo mejor desde q se invento el intellisense
+  "editor.stickyScroll.enabled": true,
+  // Usar siempre la UI de VSCode y no la nativa del OS
+  "window.dialogStyle": "custom",
+  "window.titleBarStyle": "custom",
+
   "editor.bracketPairColorization.enabled": true, 
   // #### iconos
   "workbench.iconTheme": "material-icon-theme",
@@ -497,6 +520,7 @@
   "editor.inlineSuggest.enabled": true,
   "notebook.diff.overviewRuler": true,
   "workbench.sideBar.location": "right",
+  "powermode.presets": "clippy",
 
   
 }
