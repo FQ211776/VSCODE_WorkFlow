@@ -1,0 +1,31 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "shift+space",
+        "command": "whichkey.show"
+    },
+    {
+        "key": "ctrl+f1",
+        "command": "editor.action.selectToBracket"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "-cursorWordEndRightSelect",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "-editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "extension.selectDoubleQuote",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k shift+'",
+        "command": "-extension.selectDoubleQuote",
+        "when": "editorFocus"
+    }
+]
