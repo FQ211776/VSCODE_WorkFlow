@@ -2,6 +2,49 @@
   // @modified - esto permite ver unicamente cuales settings han sido modificados
   //
   // ## 001 ## Experimentales ################################################
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "**/home/install": "shellscript",
+    "*_zshrc": "shellscript",
+    "*_antigenrc": "shellscript",
+    "*_profile.tmpl": "shellscript",
+    "*_bashrc": "shellscript",
+    "*_bash_aliases.tmpl": "shellscript",
+    "**/home/**/run_*": "shellscript",
+    "**/home/**/executable_*": "shellscript",
+    "**/home/**/modify_*": "shellscript",
+    "*.yaml.tmpl": "helm",
+    ".chezmoi*.yaml": "helm",
+    ".chezmoiignore": "helm",
+    ".chezmoiremove": "helm",
+    "**/.chezmoitemplates/*": "helm",
+    "**/.chezmoitemplates/*-library": "shellscript"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwind-fold.unfoldIfLineSelected": true,
+  "tailwind-fold.showTailwindImage": false,
+  "tailwind-fold.supportedLanguages": [
+    "html",
+    "vue",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "astro",
+    "svelte",
+    "vue-html",
+    "php",
+    "blade",
+    "erb",
+    "twig",
+    "nunjucks",
+    "django-html",
+    "jinja-html",
+    "react",
+    "dart"
+  ],
   // ## 002 ## Relacionados con git ##########################################
   "git.enableSmartCommit": true, // stage los archivos modificados si solo se pone el mensaje del commit
   "git.autofetch": "all", // mantiene automaticamente la rama local actualizada con lo q esta en el remoto
@@ -28,7 +71,7 @@
   "gitlens.statusBar.enabled": true,
   "gitlens.views.contributors.showAllBranches": true,
   "gitlens.mode.statusBar.alignment": "left",
-  "gitlens.currentLine.pullRequests.enabled": true,  
+  "gitlens.currentLine.pullRequests.enabled": true,
   "gitlens.views.lineHistory.avatars": true,
   "gitlens.gitCommands.sortBy": "usage",
   // --------------------------------GiTreeCompare---***
@@ -46,13 +89,19 @@
     "test",
     "fork*"
   ],
-  "projectManager.tags": ["Personal", "Work", "VS Code", "Learning", "UDB"],
+  "projectManager.tags": [
+    "Personal",
+    "Work",
+    "VS Code",
+    "Learning",
+    "UDB"
+  ],
   "projectManager.git.baseFolders": [
     "C:\\_0_\\"
   ],
   "projectManager.sortList": "Name",
   "projectManager.groupList": true,
-// --------------------Github pull request and issues--***
+  // --------------------Github pull request and issues--***
   "githubPullRequests.queries": [
     {
       "label": "Esperando que Robert las revise",
@@ -75,7 +124,6 @@
   "git.defaultCloneDirectory": "C:\\_0_\\",
   "githubRepositoryManager.alwaysCloneToDefaultDirectory": true,
   "githubRepositoryManager.directoriesToIgnore": [
-  
     "node_modules",
     ".vscode",
     ".git/*",
@@ -100,6 +148,19 @@
   },
   //
   //
+  // ## 004 ## TODOTREE #########################################################
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/*/**",
+    "**/vendors/**",
+    "**/bower_components/*/**",
+    "**/dist/**"
+  ],
+  // modo zen como modo por defautt
+  "zenMode.hideStatusBar": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false,
+  "zenMode.centerLayout": false,
+  //
   // ## 004 ## Fuentes #########################################################
   //
   // #### de la terminal
@@ -122,32 +183,94 @@
   //
   //
   //
-  
   // ## 005 ## Personalizar El editor #######################################
-  
   // --------------------------------Power Mode----------
-  // 
+  //
+  "powermode.presets": "clippy",
   "powermode.combo.location": "off",
-    "powermode.enabled": true,      
-    "powermode.explosions.duration": 300,
-    "powermode.explosions.size": 7,
-    "powermode.shake.enabled": false,
-    "powermode.explosions.backgroundMode": "transparent",
-    "editor.guides.highlightActiveIndentation": "always",
-
+  "powermode.enabled": true,
+  "powermode.explosions.duration": 300,
+  "powermode.explosions.size": 7,
+  "powermode.shake.enabled": false,
+  "powermode.explosions.backgroundMode": "mask",
+  "editor.guides.highlightActiveIndentation": "always",
+  // ## 005 ## Code Action on Save #######################################
+  "editor.codeActionsOnSave": {
+    "source.convertImportFormat": true,
+    "editor.formatOnSave": true,
+    "source.unusedImports": true,
+    "source.fixAll": true,
+    "source.fixAll.markdownlint": true
+  },
+  // ## 002 ## Relacionados con el editor ####################################
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true, // format text whenever its pasted into a file
+  "editor.trimAutoWhitespace": true, // remove trailing auto inserted whitespace
+  "editor.matchBrackets": "always", // highlight matching brackets when one of them is selected
+  "editor.codeLens": true, // controls if the editor shows code lenses
+  "editor.smoothScrolling": true, // controls whether the editor will scroll using an animation.
+  "editor.cursorBlinking": "expand", // control the cursor blinking animation style
+  "editor.cursorSurroundingLines": 15, //wtf dude
+  "editor.cursorSmoothCaretAnimation": "on", // controls whether the smooth caret animation should be enabled.
+  "editor.mouseWheelZoom": true, // zoom the font of the editor when using mouse wheel and holding Ctrl
+  "editor.minimap.renderCharacters": false, //will disable minimap
+  "editor.selectionHighlight": true, // controls whether the editor should highlight matches similar to the selection
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.wordBasedSuggestions": false,
+  "editor.renderWhitespace": "none",
+  "editor.cursorStyle": "block",
+  "editor.colorDecorators": true,
+  "editor.linkedEditing": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+  "editor.showFoldingControls": "always",
+  "editor.folding": true,
+  "editor.foldingStrategy": "indentation",
+  "editor.guides.bracketPairs": true,
+  "editor.fontSize": 16,
+  //"editor.letterSpacing": 1.0,
+  //"editor.lineHeight": 22,
+  //
+  // ## 002 ## Reglas en la pantalla  ####
+  //
+  "editor.rulers": [
+    2,
+    80,
+    100,
+    120
+  ],
+  // ## 002 ## Relacionados con el explorador de archivos ####
+  "explorer.sortOrder": "type", // Ordena los archivos por tipo de extension
+  "explorer.confirmDragAndDrop": false, // arrastrar archivos
+  "explorer.autoReveal": true, // Automostrarse
+  "explorer.confirmDelete": false, // no pide autorización para borrar archivos
+  //
   // ## 005 ## Personalizar Apariencia #######################################
+  //
+  "window.title": "${folderName}",
+  // no mostar el menu de la barra de titulo a menos se presione alt
+  "window.menuBarVisibility": "toggle",
+  //
+  "editor.minimap.autohide": true,
   //
   "window.newWindowDimensions": "fullscreen",
   "window.restoreFullscreen": true,
- // siempre comenzar una sesion en blanco
- "window.restoreWindows": "none",
+  // siempre comenzar una sesion en blanco
+  "window.restoreWindows": "none",
   // El sticky scroll lo mejor desde q se invento el intellisense
   "editor.stickyScroll.enabled": true,
   // Usar siempre la UI de VSCode y no la nativa del OS
   "window.dialogStyle": "custom",
   "window.titleBarStyle": "custom",
-
-  "editor.bracketPairColorization.enabled": true, 
+  "editor.bracketPairColorization.enabled": true,
   // #### iconos
   "workbench.iconTheme": "material-icon-theme",
   //
@@ -155,9 +278,8 @@
   "workbench.colorTheme": "One Dark Pro Flat",
   //
   "workbench.editor.wrapTabs": true,
-
   // ### colores e iconos personalizados
-  "workbench.colorCustomizations":{
+  "workbench.colorCustomizations": {
     // Bracket pair colorizer
     "editorBracketHighlight.foreground1": "#fafafa",
     "editorBracketHighlight.foreground2": "#9F51B6",
@@ -234,12 +356,308 @@
   },
   //
   //
-  
-
+  //
+  //
+  // ## 002 ## de la terminals ##################################
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.external.windowsExec": "C:\\Users\\saume\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe", // usa windows terminal en windows por default external
+  "terminal.explorerKind": "external",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.tabs.location": "right",
+  "terminal.integrated.lineHeight": 1.0,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.tabs.enableAnimation": true,
+  "terminal.integrated.customGlyphs": true,
+  //
+  //
+  // ## Error Lens #############################################################
+  "errorLens.fontSize": "11",
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "hint"
+  ],
+  //
+  // ## 002 ## Autoguardado de los archivos ##################################
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  //
+  //
+  // ## 002 ## Automáticamente actualizar las extensiones#####################
+  "extensions.autoUpdate": true,
+  "problems.defaultViewMode": "tree",
+  "problems.showCurrentInStatus": true,
+  //
+  //
+  // ## 005 ## Corrector de ortografía #######################
+  // code --install-extension streetsidesoftware.code-spell-checker
+  // code --install-extension streetsidesoftware.code-spell-checker-spanish
+  "cSpell.language": "en,es",
+  "cSpell.showStatus": true,
+  "cSpell.userWords": [
+    "addgitignore",
+    "alefragnani",
+    "alfazero",
+    "ansi",
+    "appbar",
+    "aqui",
+    "ARGB",
+    "asciinema",
+    "autofetch",
+    "autofocus",
+    "Autoguardado",
+    "autohide",
+    "automaticamente",
+    "Automostrarse",
+    "autovalidate",
+    "Bitstream",
+    "Bosco",
+    "BOSCO",
+    "buildable",
+    "busquedas",
+    "C",
+    "Caskaydia",
+    "Cássio",
+    "chezmoi",
+    "chmod",
+    "choco",
+    "chsh",
+    "clippy",
+    "CODESPACES",
+    "codeswing",
+    "Coenraad",
+    "Commandline",
+    "cupertino",
+    "Cupertino",
+    "dartpad",
+    "dbankier",
+    "defautt",
+    "descripcion",
+    "devcontainer",
+    "Diagnosticable",
+    "discoverability",
+    "DISTRO",
+    "donot",
+    "dotfiles",
+    "easymotion",
+    "edamagit",
+    "egresos",
+    "Egresos",
+    "eliostruyf",
+    "emojisense",
+    "endtemplate",
+    "entrantly",
+    "esbenp",
+    "felipecrs",
+    "Fira",
+    "firestore",
+    "fullscreen",
+    "gitdoc",
+    "githd",
+    "gnupg",
+    "gpgconf",
+    "gpgsign",
+    "hidecomments",
+    "initializers",
+    "jacobr",
+    "jfrog",
+    "jspolancor",
+    "juani",
+    "katex",
+    "keyid",
+    "kubectl",
+    "magit",
+    "medicalpro",
+    "microtask",
+    "mkdir",
+    "mocktail",
+    "mostar",
+    "myapp",
+    "myfunction",
+    "neovim",
+    "NEWKEYHERE",
+    "NOPASSWD",
+    "nullable",
+    "nullsafety",
+    "onedrive",
+    "openai",
+    "Overtype",
+    "poppins",
+    "Powerlevel",
+    "powermode",
+    "presentationmode",
+    "Pylance",
+    "QUINTANILLA",
+    "redhat",
+    "reentrantly",
+    "reparent",
+    "reparenting",
+    "Reparenting",
+    "roberto",
+    "Schyler",
+    "scminput",
+    "scrollback",
+    "sesion",
+    "shellcheck",
+    "signingkey",
+    "SOYAPANGO",
+    "spanish",
+    "ssio",
+    "stepsize",
+    "stringification",
+    "subclassing",
+    "submodule",
+    "subwidgets",
+    "sudoers",
+    "syncfusion",
+    "tailwindcss",
+    "temurin",
+    "tmpl",
+    "unregisters",
+    "unstage",
+    "Unstage",
+    "unsync",
+    "useb",
+    "USERPROFILE",
+    "uuid",
+    "vspacecode",
+    "whichkey",
+    "wireframe",
+    "writeln",
+    "wslpath",
+    "wslvar",
+    "yapf",
+    "youtube"
+  ],
+  "cSpell.ignorePaths": [
+    "plantillas/**", // Doesn't currently work due to how the current working directory is determined.
+    "plantillas/",
+    "node_modules", // this will ignore anything the node_modules directory
+    "**/node_modules", // the same for this one
+    "**/node_modules/**", // the same for this one
+    "node_modules/**", // Doesn't currently work due to how the current working directory is determined.
+    "vscode-extension", //
+    ".git", // Ignore the .git directory
+    "*.dll", // Ignore all .dll files.
+    "**/*.dll" // Ignore all .dll files
+  ],
+  //
+  //
   // ## 020 ## whichkey extension ##########################################
-
   "whichkey.sortOrder": "typeThenCustom",
   "whichkey.bindings": [
+    {
+      "key": "1",
+      "name": "Go to Definition - F12",
+      "type": "command",
+      "command": "editor.action.revealDefinition"
+    },
+    {
+      "key": "2",
+      "name": "Ojear la definición - ALT+F12",
+      "type": "command",
+      "command": "editor.action.peekDefinition"
+    },
+    {
+      "key": "3",
+      "name": "Ojear donde es usado - SHIFT+F12",
+      "icon": "clippy",
+      "type": "command",
+      "command": "editor.action.goToReferences"
+    },
+    {
+      "key": "4",
+      "name": "Ojea donde es implementado - CTRL+F12",
+      "icon": "clippy",
+      "type": "command",
+      "command": "editor.action.goToImplementation"
+    },
+    {
+      "key": "5",
+      "name": "Contextual Popup - SHIFT+k",
+      "icon": "clippy",
+      "type": "command",
+      "command": "editor.action.showHover"
+    },
+    {
+      "key": "6",
+      "name": "Q parametros necesito (ctrl+shift+spacebar)",
+      "icon": "clippy",
+      "type": "command",
+      "command": "editor.action.triggerParameterHints"
+    },
+    {
+      "key": "7",
+      "name": "Trigger suggestion - CTRL+SPACEBAR",
+      "icon": "clippy",
+      "type": "command",
+      "command": "editor.action.triggerSuggest"
+    },
+    {
+      "key": "8",
+      "name": "Select all occurrences of the current selection - CTRL+SHIFT+l",
+      "icon": "clippy",
+      "type": "command",
+      "command": "editor.action.selectHighlights"
+    },
+    {
+      "key": "9",
+      "name": "elimina la o todas las lineas marcadas ctrl+F2  ",
+      "icon": "clippy",
+      "type": "command",
+      "command": "editor.action.deleteLines"
+    },
+    {
+      "key": "0",
+      "name": "Compare active file with otro fuera de VSCODE",
+      "icon": "clippy",
+      "type": "command",
+      "command": "meld-diff.diffCurrentToOther"
+    },
+    {
+      "key": " ",
+      "name": "Commands",
+      "type": "command",
+      "command": "workbench.action.showCommands"
+    },
+    {
+      "key": "?",
+      "name": "Search keybindings",
+      "type": "command",
+      "command": "whichkey.searchBindings"
+    },
+    {
+      "key": "t",
+      "name": "+Terminal...",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "t",
+          "name": "Toggle Terminal",
+          "type": "command",
+          "icon": "terminal",
+          "command": "workbench.action.togglePanel"
+        },
+        {
+          "key": "\"",
+          "name": "Open new external terminal",
+          "icon": "chevron-right",
+          "type": "command",
+          "command": "workbench.action.terminal.openNativeConsole"
+        },
+        {
+          "key": "s",
+          "name": "Show terminal on tab",
+          "type": "command",
+          "command": "workbench.action.terminal.new"
+        }
+      ]
+    },
     {
       "key": "g",
       "name": "+Git",
@@ -452,7 +870,7 @@
           "name": "Unstage",
           "type": "command",
           "command": "git.unstage"
-        }, 
+        },
         {
           "key": "r",
           "name": "Agregar archivo a .gitignore",
@@ -489,9 +907,6 @@
           "type": "command",
           "command": "git-graph.view"
         },
-
-        
-        
         {
           "key": "z",
           "name": "+File",
@@ -517,10 +932,8 @@
       ]
     },
   ],
-  "editor.inlineSuggest.enabled": true,
   "notebook.diff.overviewRuler": true,
   "workbench.sideBar.location": "right",
-  "powermode.presets": "clippy",
-
-  
+  "gitlens.hovers.enabled": false,
+  "tailwind-fold.autoFold": false,
 }

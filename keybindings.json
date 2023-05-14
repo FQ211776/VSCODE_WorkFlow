@@ -1,9 +1,12 @@
 // Place your key bindings in this file to override the defaults
 //
-// shift+space............Menu personalizado
+// shift+space............Menu personalizado *
 // CTRL+SHIFT+RIGHT.......Copia todo lo que esta entre doble comillas
 // CTRL+F1................Selecciona todo dentro del caret
 // SHIFT+ALT+RIGHT/LEFT...Smart Expand/Shrink
+// CTRL+ALT+A.............FOLD and undold tailwindcss
+// ctrl + shift + i.......Documentación de 10 librerias
+// CTRL+ALT+T.............tAILWINDCSS DOCUMENTATION
 [
     {
         "key": "shift+space",
@@ -14,7 +17,7 @@
         "key": "ctrl+shift+right",
         "command": "extension.selectDoubleQuote",
         // dbankier.vscode-quick-select
-        // 
+        //
         // extension.selectSingleQuote
         // extension.selectDoubleQuote
         // extension.selectEitherQuote
@@ -55,5 +58,14 @@
         "command": "-cursorWordEndRightSelect",
         "when": "textInputFocus && !accessibilityModeEnabled"
     },
-    
+    {
+        "key": "ctrl+alt+/",
+        "command": "editor.action.revealDefinitionAside",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+k f12",
+        "command": "-editor.action.revealDefinitionAside",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
 ]
